@@ -1,0 +1,50 @@
+﻿<Window x:Class="PLGUI.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLGUI"
+        mc:Ignorable="d"
+      WindowStartupLocation="CenterScreen" Height="450" Width="450" ResizeMode="NoResize" Icon="/images/iconbus.png" 
+             
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        >
+	<Grid RenderTransformOrigin="0.506,0.216" >
+
+		<Label Content="Welcome to our Transport System" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="25" FontWeight="Medium" FontFamily="Times New Roman" Foreground="#FFC56853" Margin="40,10,0,371" Height="39" Width="350"/>
+		<TabControl  Margin="0,49,0.2,0">
+
+			<TabItem Header="log in">
+				<Grid >
+
+					<TextBox x:Name="username" HorizontalAlignment="Left" Height="33" Margin="191,70,0,0"  VerticalAlignment="Top" Width="114" MaxLength="10"/>
+					<PasswordBox x:Name="password" HorizontalAlignment="Left" Height="33" Margin="191,135,0,0" VerticalAlignment="Top" Width="114" MaxLength="6"/>
+					<Label Content="User name" HorizontalAlignment="Left" Height="38" Margin="63,73,0,0" VerticalAlignment="Top" Width="102" FontWeight="Bold" FontSize="16"/>
+					<Label Content="Password" HorizontalAlignment="Left" Height="33" Margin="63,137,0,0" VerticalAlignment="Top" Width="102" FontWeight="Bold" FontSize="16"/>
+					<Button x:Name="enter" Content="Enter" HorizontalAlignment="Left" Height="34" Margin="158,216,0,0" VerticalAlignment="Top" Width="147" Click="Enter_Click" FontSize="16" FontWeight="Bold"/>
+				</Grid>
+			</TabItem>
+			<TabItem Header="sign up">
+				<Grid>
+
+					<PasswordBox x:Name="passwordBox" MaxLength="6" Margin="158,95,147.6,220.2"/>
+
+					<Label Content="User name" HorizontalAlignment="Left" Height="32" Margin="14,40,0,0" VerticalAlignment="Top" Width="96" FontWeight="Bold" FontSize="16"/>
+					<Label Content="Password" Height="33" Margin="24,95,315.6,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="16"/>
+					<Button x:Name="enter1" Content="Save and Enter" HorizontalAlignment="Left" Height="34" Margin="143,254,0,0" VerticalAlignment="Top" Width="147" Click="SaveEnter_Click" FontWeight="Bold" FontSize="16"/>
+					<CheckBox x:Name="checkM" Content="Menager"  FontWeight="Bold" FontSize="16" Margin="24,181,315.6,132.2"/>
+					<PasswordBox x:Name="managerP" Margin="276,184,0,0" IsEnabled="{Binding ElementName=checkM, Path=IsChecked}" HorizontalAlignment="Left" Height="35"  VerticalAlignment="Top" Width="126" FontSize="16" MaxLength="6"/>
+					<Label Content="Manager Pin" HorizontalAlignment="Left" Height="32" Margin="143,184,0,0" VerticalAlignment="Top" Width="108" FontWeight="Bold" FontSize="16"/>
+					<TextBox x:Name="username1" HorizontalAlignment="Left" Height="37" Margin="158,40,0,0"  VerticalAlignment="Top" Width="132" MaxLength="10" FontSize="16"/>
+				</Grid>
+			</TabItem>
+          
+        </TabControl>
+	</Grid>
+</Window>

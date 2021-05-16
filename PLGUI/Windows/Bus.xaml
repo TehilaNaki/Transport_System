@@ -1,0 +1,68 @@
+﻿<Window x:Class="PLGUI.Bus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLGUI"
+        mc:Ignorable="d"
+     Title="Bus" Height="480" Width="664.4" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" Icon="/images/iconbus.png"   
+             
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+	
+	<Window.Resources>
+		<local:DateMonthYear x:Key="DateConverter"/>
+		<local:StatusToImage x:Key="IconConverter"/>
+		<local:ThousandConverter x:Key="ThousandConverter"/>
+		<local:YesNoConvert x:Key="YesNoConvert"/>
+		<local:LicensPrint x:Key="printL"/>
+	</Window.Resources>
+	<Grid Margin="0,2,3.6,-2.2">
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="309*" />
+			<ColumnDefinition Width="346*"/>
+
+
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<TextBlock HorizontalAlignment="Left" Height="33" Margin="10,10,0,0" TextWrapping="Wrap" Text="License Number" VerticalAlignment="Top" Width="245" FontSize="14" FontWeight="Bold"/>
+		<TextBlock HorizontalAlignment="Left" Height="33" Margin="10,9.6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Date of begin" VerticalAlignment="Top" Width="245" FontWeight="Bold" FontSize="14"/>
+		<TextBlock HorizontalAlignment="Left" Height="33" Margin="6,9.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Km Passed" VerticalAlignment="Top" Width="161" FontSize="14" FontWeight="Bold"/>
+		<TextBlock HorizontalAlignment="Left" Height="48" Margin="6,4.2,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Text=" Status" FontSize="14" FontWeight="Bold"/>
+		<TextBlock HorizontalAlignment="Left" Height="36" Margin="11,7,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Feul" VerticalAlignment="Top" Width="244" FontSize="14" TextDecorations="{x:Null}" FontWeight="Bold"/>
+		<TextBlock HorizontalAlignment="Left" Height="37" Margin="11,4.8,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Date of last treatment" VerticalAlignment="Top" Width="244" FontSize="14" FontWeight="Bold"/>
+		<TextBlock x:Name="tbLicense" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="10.2,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Text="{Binding Path=LicensNumber, Converter={StaticResource printL},UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+		<TextBlock HorizontalAlignment="Left" Height="32" Margin="11,9.6,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Km Passed from last treatment" VerticalAlignment="Top" Width="225" FontSize="14" FontWeight="Bold"/>
+		<TextBlock x:Name="tbSum" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="10.2,9.4,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" Text="{Binding Converter={StaticResource ThousandConverter},Path=KmSum,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}"  />
+		<TextBlock x:Name="tbDate" Grid.Column="1" HorizontalAlignment="Left" Margin="10.2,9.6,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="244" Text="{Binding Converter={StaticResource DateConverter}, Path=DateOfBeg,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}"/>
+		<ProgressBar x:Name="inprogress" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="15.2,13.2,0,0" Grid.Row="3"  VerticalAlignment="Top" Width="194" Value="{Binding ProgressPrecent,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"  Minimum="0" Maximum="1200" Background="#FFF2F0F6" />
+		<ProgressBar x:Name="pbFuel"  Foreground="#FFC56853" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="13.2,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="196" Minimum="0" Maximum="1200" Value="{Binding UpFuel,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"  Background="#FFF9F9F9"  />
+		<TextBlock x:Name="tbDateTreat" Grid.Column="1" HorizontalAlignment="Left" Height="34" Margin="19.2,7.8,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Text="{Binding Converter={StaticResource DateConverter}, Path=DateOfTreatment,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}"/>
+		<TextBlock x:Name="tbKmTreat" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="12.2,9.6,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Text="{Binding Converter={StaticResource ThousandConverter},Path=KmOfTreatment,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}"/>
+
+		<Image x:Name="mgStatus" HorizontalAlignment="Left" Height="38" Margin="136,7.2,0,0" VerticalAlignment="Top" Width="145" Source="{Binding Converter={StaticResource IconConverter},Path=Upstatus}" Grid.Row="3"/>
+		<Image x:Name="Wifi" HorizontalAlignment="Left" Height="32" Margin="176.2,10.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="90" Source="{Binding Converter= {StaticResource YesNoConvert }, Path=Wifi}" Grid.Column="1"/>
+		<Label Content="Wifi" HorizontalAlignment="Left" Height="32" Margin="106.2,10.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="65" FontWeight="Bold" Grid.Column="1"/>
+		<Label Content="Comfort Seat" HorizontalAlignment="Left" Height="32" Margin="202,10.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="97" FontWeight="Bold"/>
+		<Image Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="12.2,10.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="66" Source="{Binding Converter={StaticResource YesNoConvert},Path=ComfortSeat,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}"/>
+		<Label Content="Charger" HorizontalAlignment="Left" Height="32" Margin="11,10.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="92" FontWeight="Bold"/>
+		<Image Height="32" Margin="103,10.4,128.8,0" Grid.Row="7" VerticalAlignment="Top" Source="{Binding Converter={StaticResource YesNoConvert},Path=Charger,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}"/>
+		<Button Content="Show Trips" Grid.Column="1" HorizontalAlignment="Left" Height="34" Margin="176.2,9,0,0" VerticalAlignment="Top" Width="141" Click="ShowTrips_Click"/>
+	</Grid>
+</Window>

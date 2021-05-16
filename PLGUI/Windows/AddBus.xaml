@@ -1,0 +1,43 @@
+﻿<Window x:Class="PLGUI.AddBus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLGUI"
+        mc:Ignorable="d"
+        Height="429.661" Width="587.712" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/images/iconbus.png" 
+             Title="Bus"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+	<Window.Resources>
+		<local:ThousandConverter x:Key="ThousandConvert"/>
+		<local:LicensPrint x:Key="printLicens"/>
+		<local:DateMonthYear x:Key="date"/>
+	</Window.Resources>
+	<Grid Margin="0,0,-0.4,0" Height="400" VerticalAlignment="Top">
+		<Label Content="licenese number" HorizontalAlignment="Left" Height="28" Margin="30,34,0,0" VerticalAlignment="Top" Width="121" RenderTransformOrigin="0.326,0.754"  FontSize="14" FontWeight="Bold" />
+		<Label Content="Date of commencement of the activity" HorizontalAlignment="Left" Height="33" Margin="26,93,0,0" VerticalAlignment="Top" Width="275"  FontSize="14" FontWeight="Bold"/>
+		<Label Content="Km Passed" HorizontalAlignment="Left" Height="38" Margin="26,151,0,0" VerticalAlignment="Top" Width="103"  FontSize="14" FontWeight="Bold"/>
+
+		<Label Content="Fuel Liter" HorizontalAlignment="Left" Height="35" Margin="26,210,0,0" VerticalAlignment="Top"  Width="125"  FontSize="14" FontWeight="Bold" />
+		<TextBox x:Name="licenum" HorizontalAlignment="Left" Height="31" Margin="198,34,0,0" TextWrapping="Wrap" Text="{Binding Path=LicensNumber,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" VerticalAlignment="Top" Width="133" MaxLength="8" PreviewKeyDown="TextBox_OnlyNumbers_PreviewKeyDown" />
+		<TextBox x:Name="km" HorizontalAlignment="Left" Height="31" Margin="198,151,0,0" TextWrapping="Wrap" Text="{Binding Converter={StaticResource ThousandConvert},Path=KmSum,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" VerticalAlignment="Top" Width="133" RenderTransformOrigin="0.627,0.686"  MaxLength="6" PreviewKeyDown="TextBox_OnlyNumbers_PreviewKeyDown" />
+
+		<TextBox x:Name="fuel" HorizontalAlignment="Left" Height="31" Margin="198,210,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="133" MaxLength="5" Text="{Binding Converter={StaticResource ThousandConvert},Path=Fuel, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" PreviewKeyDown="TextBox_OnlyNumbers_PreviewKeyDown" />
+		<Button x:Name="save" Background="#FFC56853" Content="Save" HorizontalAlignment="Left" Height="32" Margin="294,329,0,0" VerticalAlignment="Top" Width="78" Click="Save_Click"/>
+		<Button x:Name="cancel" Background="#FFC56853" Content="Cancel"  HorizontalAlignment="Left" Height="32" Margin="399,329,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.5,0.5" Click="Cancel_Click"/>
+		<CheckBox x:Name="charger" Content="Charger" HorizontalAlignment="Left" Height="37" Margin="32,272,0,0" VerticalAlignment="Top" Width="97"  FontWeight="Bold" IsChecked="{Binding Path=Charger, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+		<CheckBox x:Name="seat" Content="Comfort Seat" HorizontalAlignment="Left" Height="37" Margin="183,272,0,0" VerticalAlignment="Top" Width="118" FontWeight="Bold" IsChecked="{Binding Path=ComfortSeat, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+		<CheckBox x:Name="wifi" Content="Wifi" HorizontalAlignment="Left" Height="37" Margin="336,272,0,0" VerticalAlignment="Top" Width="112" FontWeight="Bold" IsChecked="{Binding Path=Wifi, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+        <DatePicker x:Name="date" SelectedDate="{Binding  DateOfBeg}" 
+                 DisplayDate="{Binding DateOfBeg, Mode=TwoWay,  UpdateSourceTrigger=LostFocus}" HorizontalAlignment="Left" Height="33" Margin="306,93,0,0" VerticalAlignment="Top" Width="146"
+                   />
+
+
+	</Grid>
+</Window>

@@ -1,0 +1,14 @@
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\bin\DLXML.dll
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\bin\DLXML.pdb
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.csprojAssemblyReference.cache
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.csproj.CoreCompileInputs.cache
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.csproj.CopyComplete
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.dll
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.pdb
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\bin\DLXML.dll
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\bin\DLXML.pdb
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.csprojAssemblyReference.cache
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.csproj.CoreCompileInputs.cache
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.csproj.CopyComplete
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.dll
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLXML\obj\Debug\DLXML.pdb

@@ -1,0 +1,76 @@
+﻿<Window x:Class="PLGUI.BusOnTrip"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLGUI"
+        mc:Ignorable="d"
+      Title="Bus Trips" Height="400" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/images/iconbus.png"  >
+    <Window.Resources>
+        <local:LicensPrint x:Key="licens"/>
+        <DataTemplate x:Key="MyDataTemplate" DataType="local:MyData">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="45" />
+                    <ColumnDefinition Width="45" />
+                    <ColumnDefinition Width="75" />
+                    <ColumnDefinition Width="95" />
+                    <ColumnDefinition Width="95" />
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="{Binding Path=ID, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <Label Grid.Column="1" Content="{Binding Path=LineNumber,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <Label Grid.Column="2" Content="{Binding Path=DriverId,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <Label Grid.Column="3" Content="{Binding Path=PrevStation,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <Label Grid.Column="4" Content="{Binding Path=ActualTakeOff,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <Label Grid.Column="5" Content="{Binding Path=LicensNumber,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <Button Grid.Column="6"  VerticalAlignment="Center" Click="Delete_Click" Height="40" Width="50" Background="Transparent">
+                    <Image Source="/Images/delete_bin_64px.png" />
+                </Button>
+                <Button Grid.Column="7" VerticalAlignment="Center" Click="Update_Click" Height="40" Width="50" Background="Transparent">
+                    <Image Source="/Images/update_24px.png" />
+                </Button>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid HorizontalAlignment="Left" Width="650">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"  Grid.ColumnSpan="7">
+            <Label x:Name="licenslabal" HorizontalAlignment="Center" Height="40"  VerticalAlignment="Top" Width="195" FontSize="18" FontWeight="Bold" FontStyle="Italic" Margin="129,0,525.6,0"/>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,2,60,0" Grid.ColumnSpan="3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="95" />
+                <ColumnDefinition Width="95" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="ID" />
+            <Label Grid.Column="1" Content="Line"/>
+            <Label Grid.Column="2" Content="Driver" />
+            <Label Grid.Column="3" Content="First Station" />
+            <Label Grid.Column="4" Content="Actual Take Off" Grid.ColumnSpan="3"  />
+            <Label Grid.Column="5" Content="Licens Number" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="6" >
+            <ListBox x:Name="busTrips" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" ItemTemplate="{StaticResource MyDataTemplate}" HorizontalContentAlignment="Stretch" SelectionChanged="busTrips_SelectionChanged" HorizontalAlignment="Left" Height="303"  VerticalAlignment="Top" Width="640" Margin="0,7,0,-19.6"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.ColumnSpan="4" >
+            <Button x:Name="add" IsEnabled="{Binding CanAddTrip}" Content="Add a new trip" Click="Add_Click" Height="30" Background="#FFC56853" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,163,10"/>
+        </Grid>
+
+    </Grid>
+</Window>

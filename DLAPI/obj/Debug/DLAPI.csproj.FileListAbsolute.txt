@@ -1,0 +1,10 @@
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\bin\DLAPI.dll
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\bin\DLAPI.pdb
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLAPI\obj\Debug\DLAPI.csproj.CoreCompileInputs.cache
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLAPI\obj\Debug\DLAPI.dll
+C:\Users\Tehila Naki\Documents\שנה ב'\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLAPI\obj\Debug\DLAPI.pdb
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\bin\DLAPI.dll
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\bin\DLAPI.pdb
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLAPI\obj\Debug\DLAPI.csproj.CoreCompileInputs.cache
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLAPI\obj\Debug\DLAPI.dll
+C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\DLAPI\obj\Debug\DLAPI.pdb

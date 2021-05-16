@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfIDis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IDis>
+    <Name>Line</Name>
+    <Id>3020</Id>
+  </IDis>
+  <IDis>
+    <Name>LineStation</Name>
+    <Id>2102</Id>
+  </IDis>
+  <IDis>
+    <Name>BusOnTrip</Name>
+    <Id>1048</Id>
+  </IDis>
+</ArrayOfIDis>
