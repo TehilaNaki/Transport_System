@@ -12,3 +12,10 @@ C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונ�
 C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\BL\obj\Debug\BL.dll
 C:\Users\Tehila Naki\Documents\שנה ב\סמסטר א'\פרוייקט חלונות\New folder (2)\dotNet5781_1571_5430\BL\obj\Debug\BL.pdb
+C:\Users\Tehila Naki\Documents\GitHub\Transport_System\bin\BL.dll
+C:\Users\Tehila Naki\Documents\GitHub\Transport_System\bin\BL.pdb
+C:\Users\Tehila Naki\Documents\GitHub\Transport_System\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\Tehila Naki\Documents\GitHub\Transport_System\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\Tehila Naki\Documents\GitHub\Transport_System\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\Tehila Naki\Documents\GitHub\Transport_System\BL\obj\Debug\BL.dll
+C:\Users\Tehila Naki\Documents\GitHub\Transport_System\BL\obj\Debug\BL.pdb
